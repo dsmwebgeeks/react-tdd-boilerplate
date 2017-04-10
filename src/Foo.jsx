@@ -2,7 +2,9 @@ import React, {Component} from 'react';
 
 class Foo extends Component {
   render() {
-    return <div />;
+    let label = this.props.label || "Awesome";
+
+    return <div>{label}</div>;
   }
 }
 

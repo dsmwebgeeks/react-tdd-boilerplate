@@ -1,0 +1,13 @@
+{
+    "require": [
+      "babel-register"
+    ],
+    "reporter": [
+      "lcov",
+      "text-summary"
+    ],
+    "extension": [
+      ".jsx"
+    ],
+    "cache": true
+}

@@ -8,7 +8,7 @@ describe('Foo', () => {
   let element;
 
   beforeEach('set up', () => {
-    element = shallow(<Foo />);
+    element = shallow(<Foo label="hotdog" />);
   });
 
   it('should render as a div', () => {
