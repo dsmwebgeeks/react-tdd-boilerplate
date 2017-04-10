@@ -1,10 +1,10 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 
 class Foo extends Component {
   render() {
-    let {message} = this.props;
+    let { message, whenClicked } = this.props;
 
-    return <div>{message}</div>;
+    return <div onClick={whenClicked}>{message}</div>;
   }
 }
 

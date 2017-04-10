@@ -13,11 +13,26 @@
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/react/15.4.0/react-dom.js"></script>
 <script type="text/javascript" src="./dist/application.js"></script>
 <script type="text/javascript">
-  document.addEventListener('DOMContentLoaded', function() {
+  var appState = {
+    message: "Hello, world!",
+    whenClicked: whenFooClicked
+  };
+  
+  function whenFooClicked() {
+    appState.message = "Another nonsensical phrase!";
+
+    doRender();
+  }
+
+  function doRender() {
     var container = document.getElementById("app-container"),
-      element = React.createElement(window.Foo, {message: "Hello, world!"});
+      element = React.createElement(window.Foo, appState);
 
     ReactDOM.render(element, container);
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    doRender();
   });
 </script>
 </body>
