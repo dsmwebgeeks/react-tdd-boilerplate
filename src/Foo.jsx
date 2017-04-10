@@ -2,7 +2,9 @@ import React, {Component} from 'react';
 
 class Foo extends Component {
   render() {
-    return <div />;
+    let {message} = this.props;
+
+    return <div>{message}</div>;
   }
 }
 
