@@ -8,7 +8,7 @@
   },
   "scripts": {
     "test": "mocha test",
-    "dist": "webpack"
+    "dist": "BABEL_ENV=production webpack"
   },
   "repository": {
     "type": "git",
@@ -25,6 +25,7 @@
     "babel-core": "^6.24.1",
     "babel-loader": "^6.4.1",
     "babel-preset-es2015": "^6.24.1",
+    "babel-preset-es2015-native-modules": "^6.9.4",
     "babel-preset-react": "^6.24.1",
     "babel-register": "^6.24.1",
     "chai": "^3.5.0",
@@ -34,5 +35,21 @@
     "react-addons-test-utils": "~15.4.0",
     "react-dom": "~15.4.0",
     "webpack": "^2.3.3"
+  },
+  "babel": {
+    "env": {
+      "development": {
+        "presets": [
+          "es2015",
+          "react"
+        ]
+      },
+      "production": {
+        "presets": [
+          ["es2015", { "modules": false}],
+          "react"
+        ]
+      }
+    }
   }
 }
